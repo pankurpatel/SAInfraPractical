@@ -1,0 +1,205 @@
+<!-- Start: Banner Section -->
+<section class="hmbanner-section">
+    <owl-carousel-o [options]="customOptions" class="home-banner hmbanner-slider">
+
+        <ng-container *ngFor="let slide of slides">
+            <ng-template carouselSlide [id]="slide.id">
+                <div class="item" style="background-image: url('{{slide.img}}');">
+                    <img [src]="slide.img" alt="{{slide.title}}" width="2020" height="951" />
+                    <div class="hmban-caption">
+                        <div class="container-xxl">
+                            <div class="hmbancaption-inner">
+                                <div class="hmbanner-text">
+                                    <h2 data-aos="fade-down">{{slide.title}}<sup>{{slide.titlesub}}</sup></h2>
+                                    <p data-aos="fade-up">{{slide.shorttext}}</p>
+                                </div>
+                                <figcaption data-aos="fade-left" class="hmbanner-thumb">
+                                    <img [src]="slide.figimage" alt="{{slide.figimagecap}}" width="280" height="420" />
+                                    <figcaption>{{slide.figimagecap}}</figcaption>
+                                </figcaption>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </ng-container>
+
+    </owl-carousel-o>
+    <a data-aos="fade-down" class="hmbanner-arrow" href="#hmabout"><i class="fa fa-arrow-down-long"></i></a>
+</section>
+<!-- End: Banner Section -->
+
+<!-- Start: About Section -->
+<section id="hmabout" class="hmabout-section">
+    <div class="container-xxl">
+        <div class="hmabout-content">
+            <h1 data-aos="fade-down">SA Infrastructure Consultants</h1>
+            <p data-aos="fade-up">A firm of designers, engineers, architects,
+                planners, consultants, and technical specialists, working hand
+                in hand across every aspect of today's built environment. We
+                coordinates consulting, supervision and Design Engineering for
+                the most difficult environments, linking people and economies
+                via highways, bridges, tunnels, and other public transportation
+                systems.</p>
+            <a data-aos="fade-up" class="linkup-arrow" href="#">About Company <i class="fa fa-arrow-up"></i></a>
+        </div>
+    </div>
+</section>
+<!-- End: About Section -->
+
+<!-- Start: Counter Section -->
+<section class="hmcounter-section">
+    <div class="container-fluid">
+        <div data-aos="fade-right" class="row hmcounter-list">
+            <div class="col-sm-4 item">
+                <div class="hmcounter-box">
+                    <div class="hmcount-num"> 
+                        <sup><i class="fa fa-award"></i></sup><span class="countnum countnum1">{{ counter1 }}</span><span
+                            class="countplus">+</span>
+                    </div>
+                    <span class="hmcount-name">Years Experience</span>
+                </div>
+            </div>
+            <div class="col-sm-4 item">
+                <div class="hmcounter-box">
+                    <div class="hmcount-num">
+                        <sup><i class="fa fa-user"></i></sup><span class="countnum countnum2">{{ counter2 }}</span><span
+                            class="countplus">+</span>
+                    </div>
+                    <span class="hmcount-name">Employees</span>
+                </div>
+            </div>
+            <div class="col-sm-4 item">
+                <div class="hmcounter-box">
+                    <div class="hmcount-num">
+                        <sup><i class="fa fa-award"></i></sup><span class="countnum countnum3">{{ counter3 }}</span><span
+                            class="countplus">+</span>
+                    </div>
+                    <span class="hmcount-name">Projects</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End: Counter Section -->
+
+<!-- Start: Map Section -->
+<section class="hmmap-section">
+    <div class="container-fluid p-0">
+        <!-- <img src="../../../assets/images/map-image.jpg" alt="Map" width="1920" height="900" /> -->
+        <img src="../../../assets/images/map-image.jpg" usemap="#image-map" alt="Map" width="1920" height="900">
+
+        <map name="image-map">
+            <area target="_self" alt="Ahmedabad" title="Ahmedabad" href="google.com" coords="705,378,705,378" shape="rect">
+            <area target="_self" alt="Vadodara" title="Vadodara" href="#" coords="745,403" shape="rect">
+            <area target="_self" alt="Udaipur" title="Udaipur" href="#" coords="784,403,NaN" shape="circle">
+            <area target="_self" alt="Pune" title="Pune" href="#" coords="805,566,NaN" shape="circle">
+            <area target="_self" alt="Nagpur" title="Nagpur" href="#" coords="840,481,NaN" shape="circle">
+            <area target="_self" alt="Pakhanjur" title="Pakhanjur" href="#" coords="913,478,NaN" shape="circle">
+            <area target="_self" alt="Bhopal" title="Bhopal" href="#" coords="881,412,NaN" shape="circle">
+            <area target="_self" alt="Guna" title="Guna" href="#" coords="854,383,NaN" shape="circle">
+            <area target="_self" alt="Jharkhand" title="Jharkhand" href="#" coords="971,398,NaN" shape="circle">
+            <area target="_self" alt="Dhanbad" title="Dhanbad" href="#" coords="1052,388,NaN" shape="circle">
+            <area target="_self" alt="Bihar" title="Bihar" href="#" coords="1059,342,NaN" shape="circle">
+            <area target="_self" alt="Lukknow" title="Lukknow" href="#" coords="917,298,NaN" shape="circle">
+            <area target="_self" alt="Kanpur" title="Kanpur" href="#" coords="869,317,NaN" shape="circle">
+            <area target="_self" alt="Delhi" title="Delhi" href="#" coords="825,278,NaN" shape="circle">
+            <area target="_self" alt="Haryana" title="Haryana" href="#" coords="783,256,NaN" shape="circle">
+            <area target="_self" alt="Chandigarh" title="Chandigarh" href="#" coords="849,186,NaN" shape="circle">
+        </map>
+        <div class="hmmap-caption">
+            <div class="container-xxl">
+                <owl-carousel-o [options]="mapOptions" class="hmprojects-list hmprojects-slider">
+
+                    <ng-container *ngFor="let mapSlide of mapSlides">
+                        <ng-template carouselSlide [id]="mapSlide.id">
+                            <div class="col-sm-44 item">
+                                <div class="hmmapdata-box">
+                                    <strong class="hmmap-year">{{mapSlide.mapyear}}</strong>
+                                    <div class="hmmap-text">
+                                        <p>{{mapSlide.shorttext}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+
+                <!-- <div class="row hmmapdata-row hmmapdata-slider">
+                    <div class="col-sm-4 item">
+                        <div class="hmmapdata-box">
+                            <strong class="hmmap-year">2003</strong>
+                            <div class="hmmap-text">
+                                <p>Proprietary Firm in the name of
+                                    “Infrastructure Engineers and Consultants"</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="hmmapdata-box">
+                            <div class="hmmap-text">
+                                <p>First IE Project – Mumbai Pune Expressway of
+                                    old NH-4</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="hmmapdata-box">
+                            <div class="hmmap-text">
+                                <p>First DPR of Darbhanga – Jhanjharpur in Bihar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End: Map Section -->
+
+
+<!-- Start: Projects Section -->
+<section class="hmprojects-section">
+    <div class="hmprojects-heading" data-aos="fade-down">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6 p-0">
+                    <div class="hmprojects-text">
+                        <small>Explore the Projects</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid p-0">
+        <owl-carousel-o [options]="projectOptions" class="hmprojects-list hmprojects-slider">
+
+            <ng-container *ngFor="let projectSlide of projectSlides">
+                <ng-template carouselSlide [id]="projectSlide.id">
+                    <div class="row item-row m-0">
+                        <div class="col-sm-6 p-0">
+                            <div class="hmprojects-text">
+                                <div class="hmprojects-txtinner">
+                                    <h2 data-aos="fade-up">{{projectSlide.title}}</h2>
+                                    <div class="hmprojects-desc" data-aos="fade-up">
+                                        <p>{{projectSlide.shorttext}}</p>
+                                        <a class="linkup-arrow" href="{{projectSlide.linkurl}}">{{projectSlide.linkname}} <i class="fa fa-arrow-up"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 p-0">
+                            <figure class="hmprojects-img" data-aos="fade-left">
+                                <img [src]="projectSlide.figimage" alt="{{projectSlide.title}}" alt="Highways" width="1920"
+                                    height="900" />
+                                <figcaption data-aos="fade-right"><img [src]="projectSlide.figimagecap" alt="{{projectSlide.figcapname}}" width="595" height="71" /></figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </ng-template>
+            </ng-container>
+
+        </owl-carousel-o>
+    </div>
+</section>
+<!-- End: Projects Section -->

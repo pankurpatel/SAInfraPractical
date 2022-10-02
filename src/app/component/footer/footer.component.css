@@ -1,0 +1,16 @@
+/***************************************
+            Start: Footer
+***************************************/
+/* Start: Footer Main */
+#footer{border-top: 1px solid rgba(255,255,255,0.2);}
+/* End: Footer Main */
+
+/* Start: Footer Copyright */
+.copyrightfoot {padding: 60px 0;}
+.copyrightfoot .container-xxl{max-width: 1680px;}
+.creteby{text-align: right;}
+/* End: Footer Copyright */
+
+/****************************
+      End: Footer
+****************************/
